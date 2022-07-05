@@ -37,7 +37,7 @@ const CreateAccount = ({setIndexStep}:any) => {
 
       <div className='main m-8'>
          
-         <div className={`flex flex-col justify-center items-center ${!step ? 'login-cont' : 'login-cont-2'}`}>
+         <div className={`flex flex-col justify-center ${!step ? 'login-cont' : 'login-cont-2'}`}>
          {!step ? 
            <>
             <div className="title">Create your account</div>
@@ -56,7 +56,7 @@ const CreateAccount = ({setIndexStep}:any) => {
         <div className="subtitle">A short description comes here</div>
             <ul>
                 {menuList.map((menu: any, index: number) => (
-                    <li className={`${(index === formvalue) ? 'openList' : 'listShadow'} rounded px-6 py-2 m-4`} key={index}>
+                    <li className={`${(index === formvalue) ? 'openList' : 'listShadow'} rounded px-6 py-2 my-4`} key={index}>
                      <label className="">
                         <div className="flex">
                             <input className="mr-4" onChange={(e) => handleChange(e, index)} type="radio" name="menu" checked={index === formvalue}/>

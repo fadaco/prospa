@@ -16,7 +16,7 @@ const LoginAccount = () => {
      
       <div className='main'>
          
-         <div className='flex flex-col justify-center items-center login-cont'>
+         <div className='flex flex-col justify-center login-cont'>
            <div className="title">Welcome back to Prospa</div>
            <div className="subtitle">An account, with powerful, personalised tools<br/>all in one place</div>
            <div className="my-8 flex flex-col">
