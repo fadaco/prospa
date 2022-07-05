@@ -1,10 +1,12 @@
 import React from "react";
+import {  useNavigate } from 'react-router-dom'
 import RedirectAuth from "./redirectIfAuth"
 import TextInput from "./components/textInput"
 import Button from "./components/button"
 import check from './assets/check.png';
 
 const CreateAccount = ({setIndexStep}:any) => {
+    const navigate = useNavigate()
 
 
 
@@ -30,6 +32,10 @@ const CreateAccount = ({setIndexStep}:any) => {
         setformvalue(index)
     }, [menuList])
 
+    const handleSubmit =() => {
+        sessionStorage.setItem('auth', 'true');
+        navigate('/dashboard')
+    }
 
 
     return (
@@ -84,7 +90,7 @@ const CreateAccount = ({setIndexStep}:any) => {
                     </li>
                 ))}
             </ul>
-            <Button className={'btn w-full py-3 mt-4 rounded'} onClick={() => console.log('ddd')}  text="Next"/>
+            <Button className={'btn w-full py-3 mt-4 rounded'} onClick={() => handleSubmit()}  text="Next"/>
         </>
         }
         </div> 

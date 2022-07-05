@@ -10,8 +10,8 @@ const LoginAccount = () => {
     const handleSubmit =() => {
         sessionStorage.setItem('auth', 'true');
         navigate('/dashboard')
-
     }
+    
     return (
      
       <div className='main'>
